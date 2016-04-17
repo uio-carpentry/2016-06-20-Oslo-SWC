@@ -12,7 +12,8 @@ startdate: 2016-06-20      # use YYYY-MM-DD format like 2015-01-01
 enddate: 2016-06-21        # use YYYY-MM-DD format like 2015-01-02
 instructor: ["Hugues Fontenelle", "Lex Nederbragt", "Carrie Andrew", "Anne Fouilloux"] # list of names like ["Kay McNulty", "Betty Jennings", "Betty Snyder"]
 helper: ["FIXME"]     # list of names like ["Marlyn Wescoff", "Fran Bilas", "Ruth Lichterman"]
-contact: "organizers@swcarpentry.uio.no"      # contact email address for workshop organizer, such as "grace@hopper.org"
+contact: "contact-us@swcarpentry.uio.no"      # contact email address for workshop organizer, such as "grace@hopper.org"
+register: "https://nettskjema.uio.no/answer/71933.html"     
 etherpad: http://pad.software-carpentry.org/2016-06-20-oslo-swc        # optional (insert the URL for your Etherpad if you're using one)
 eventbrite:       # optional (insert the alphanumeric key for Eventbrite registration, e.g., "1234567890AB")
 ---
@@ -177,6 +178,15 @@ Software Carpentry staff may need to know in your email.</h4>
   for more information.
 </p>
 
+<p id="registration">
+  <strong>Registration</strong>:
+  Please register  
+  {% if page.contact %}
+    <a href='mailto:{{page.contact}}'>here.</a>
+  {% else %}
+    <a href='mailto:{{site.contact}}'>here.</a>
+  {% endif %}
+</p>
 <hr/>
 
 <!--
@@ -194,7 +204,7 @@ Software Carpentry staff may need to know in your email.</h4>
 <p><a href='{{ site.swc_pre_survey }}{{ site.github.project_title }}'>Pre-workshop Survey</a></p>
 <p><a href='{{ site.swc_post_survey }}{{ site.github.project_title }}'>Post-workshop Survey</a></p>
 
-<p>We will cover the Unix shell and git on the first day and we will learn how to build programs either with Python (Room 108) or R (Room UE32) on the second day. The choice between Python or R is done when you register to the workshop.
+<p>We will cover the Unix shell and git on the first day. The second day, we will learn how to build programs either with Python (Room 108) or R (Room UE32). To add more flexibility, you can choose to attend one day only and on the second day you may choose between Python or R. These choices are done when you <a href="https://nettskjema.uio.no/answer/71933.html">register to the workshop</a>.
 </p>
 
 <div class="row">
@@ -209,6 +219,12 @@ Software Carpentry staff may need to know in your email.</h4>
       <tr> <td>16:00</td>  <td>Wrap-up</td> </tr>
     </table>
   </div>
+</div>
+
+<p>
+</p>
+
+<div class="row">
   <div class="col-md-6">
     <h3>Day 2 (Room 108)</h3>
     <table class="table table-striped">
